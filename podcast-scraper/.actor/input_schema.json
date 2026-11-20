@@ -1,0 +1,61 @@
+{
+  "title": "Podcast Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchTerms": {
+      "title": "Search podcasts by keyword",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Find podcasts about these topics (uses the Apple Podcasts directory).",
+      "prefill": [
+        "true crime"
+      ]
+    },
+    "podcasts": {
+      "title": "Podcast URLs",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Apple Podcasts URLs (https://podcasts.apple.com/gb/podcast/.../id1234567890) or RSS feed URLs."
+    },
+    "country": {
+      "title": "Country",
+      "type": "string",
+      "default": "us",
+      "description": "Two-letter Apple Podcasts country code for search, e.g. us, gb.",
+      "editor": "textfield"
+    },
+    "maxPodcastsPerSearch": {
+      "title": "Max podcasts per search term",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 200,
+      "default": 50,
+      "description": "Max podcasts per search term.",
+      "editor": "number"
+    },
+    "includeOwnerContact": {
+      "title": "Include owner name & email from RSS",
+      "type": "boolean",
+      "default": true,
+      "description": "Reads each podcast's public RSS feed for the owner name and contact email (where published), last episode date and episode count.",
+      "editor": "checkbox"
+    },
+    "maxEpisodesPerPodcast": {
+      "title": "Episodes per podcast",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Also save the latest N episodes of each podcast as separate rows (0 = podcasts only).",
+      "editor": "number"
+    },
+    "activeWithinDays": {
+      "title": "Only active podcasts (days)",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Keep only podcasts that released an episode in the last N days (0 = no filter).",
+      "editor": "number"
+    }
+  }
+}

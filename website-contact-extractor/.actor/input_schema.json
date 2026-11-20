@@ -1,0 +1,42 @@
+{
+  "title": "Website Contact & Social Links Extractor input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "websites": {
+      "title": "Websites",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Website URLs or domains (e.g. example.com). One result row per website.",
+      "prefill": [
+        "https://monzo.com"
+      ]
+    },
+    "maxPagesPerSite": {
+      "title": "Max pages per website",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50,
+      "default": 8,
+      "description": "Homepage plus the most likely contact, about, team and legal pages.",
+      "editor": "number"
+    },
+    "phoneRegion": {
+      "title": "Default phone country",
+      "type": "string",
+      "default": "GB",
+      "description": "Two-letter country code used to read phone numbers written without a country prefix, e.g. GB, US.",
+      "editor": "textfield"
+    },
+    "sameDomainEmailsOnly": {
+      "title": "Only emails on the website's own domain",
+      "type": "boolean",
+      "default": false,
+      "description": "Only emails on the website's own domain.",
+      "editor": "checkbox"
+    }
+  },
+  "required": [
+    "websites"
+  ]
+}

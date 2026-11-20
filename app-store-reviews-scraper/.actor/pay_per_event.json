@@ -1,0 +1,7 @@
+{
+  "review": {
+    "eventTitle": "Review scraped",
+    "eventDescription": "Charged per review saved.",
+    "eventPriceUsd": 0.00025
+  }
+}

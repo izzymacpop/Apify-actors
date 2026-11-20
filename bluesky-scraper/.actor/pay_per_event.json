@@ -1,0 +1,7 @@
+{
+  "item": {
+    "eventTitle": "Item scraped",
+    "eventDescription": "Charged per post, profile or follower saved.",
+    "eventPriceUsd": 0.0005
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "article": {
+    "eventTitle": "Article scraped",
+    "eventDescription": "Charged per news article saved.",
+    "eventPriceUsd": 0.002
+  }
+}

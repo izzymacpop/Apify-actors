@@ -1,0 +1,119 @@
+{
+  "title": "Google News Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "queries": {
+      "title": "Search queries",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keywords to search Google News for. Supports Google operators, e.g. \"climate change\" site:bbc.co.uk, OR, -word.",
+      "prefill": [
+        "artificial intelligence"
+      ]
+    },
+    "topics": {
+      "title": "Topics (headlines)",
+      "type": "array",
+      "editor": "select",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TOP",
+          "WORLD",
+          "NATION",
+          "BUSINESS",
+          "TECHNOLOGY",
+          "ENTERTAINMENT",
+          "SPORTS",
+          "SCIENCE",
+          "HEALTH"
+        ]
+      },
+      "description": "Also collect the current headlines for these topics."
+    },
+    "edition": {
+      "title": "Edition (language & country)",
+      "type": "string",
+      "editor": "select",
+      "default": "en-GB:GB",
+      "enum": [
+        "en-GB:GB",
+        "en-US:US",
+        "en-IE:IE",
+        "en-AU:AU",
+        "en-CA:CA",
+        "en-IN:IN",
+        "de:DE",
+        "fr:FR",
+        "es:ES",
+        "it:IT",
+        "pt-BR:BR",
+        "nl:NL",
+        "ja:JP"
+      ],
+      "enumTitles": [
+        "UK (English)",
+        "US (English)",
+        "Ireland",
+        "Australia",
+        "Canada",
+        "India",
+        "Germany",
+        "France",
+        "Spain",
+        "Italy",
+        "Brazil",
+        "Netherlands",
+        "Japan"
+      ],
+      "description": "Edition (language & country)."
+    },
+    "timeframe": {
+      "title": "Published within",
+      "type": "string",
+      "editor": "select",
+      "default": "any",
+      "enum": [
+        "any",
+        "1h",
+        "1d",
+        "7d",
+        "30d",
+        "1y"
+      ],
+      "enumTitles": [
+        "Any time",
+        "Past hour",
+        "Past 24 hours",
+        "Past week",
+        "Past month",
+        "Past year"
+      ],
+      "description": "Published within."
+    },
+    "maxArticlesPerQuery": {
+      "title": "Max articles per query/topic",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "default": 100,
+      "description": "Max articles per query/topic.",
+      "editor": "number"
+    },
+    "decodeUrls": {
+      "title": "Resolve real article URLs",
+      "type": "boolean",
+      "default": true,
+      "description": "Converts news.google.com redirect links into the publisher's real article URL.",
+      "editor": "checkbox"
+    },
+    "fetchArticleDetails": {
+      "title": "Fetch article description & image",
+      "type": "boolean",
+      "default": false,
+      "description": "Opens each article to read its meta description, image and author (slower).",
+      "editor": "checkbox"
+    }
+  }
+}

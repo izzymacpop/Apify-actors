@@ -1,0 +1,12 @@
+{
+  "podcast": {
+    "eventTitle": "Podcast scraped",
+    "eventDescription": "Charged per podcast saved.",
+    "eventPriceUsd": 0.003
+  },
+  "episode": {
+    "eventTitle": "Episode scraped",
+    "eventDescription": "Charged per episode saved.",
+    "eventPriceUsd": 0.0005
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "ATS Jobs Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "companies": {
+      "title": "Companies",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Careers page URLs (e.g. https://boards.greenhouse.io/airbnb, https://jobs.lever.co/palantir, https://jobs.ashbyhq.com/openai) or plain company slugs (e.g. airbnb). Plain slugs are tried on every supported platform.",
+      "prefill": [
+        "https://boards.greenhouse.io/airbnb",
+        "https://jobs.lever.co/palantir",
+        "https://jobs.ashbyhq.com/openai"
+      ]
+    },
+    "keywords": {
+      "title": "Title keywords",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep jobs whose title contains any of these words (case-insensitive). Leave empty for all jobs."
+    },
+    "locations": {
+      "title": "Location contains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep jobs whose location contains any of these (e.g. London, United Kingdom, Remote)."
+    },
+    "remoteOnly": {
+      "title": "Remote only",
+      "type": "boolean",
+      "default": false,
+      "description": "Keep only jobs marked or described as remote.",
+      "editor": "checkbox"
+    },
+    "postedWithinDays": {
+      "title": "Posted within (days)",
+      "type": "integer",
+      "minimum": 0,
+      "description": "Keep jobs posted or updated in the last N days (0 = no limit). Some platforms only expose 'updated' dates.",
+      "default": 0,
+      "editor": "number"
+    },
+    "includeDescription": {
+      "title": "Include full description",
+      "type": "boolean",
+      "default": true,
+      "description": "Adds the job description as plain text and HTML.",
+      "editor": "checkbox"
+    },
+    "maxJobsPerCompany": {
+      "title": "Max jobs per company",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "0 = no limit.",
+      "editor": "number"
+    }
+  },
+  "required": [
+    "companies"
+  ]
+}

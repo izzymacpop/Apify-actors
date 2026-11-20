@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "hacker-news-scraper",
+  "title": "Hacker News Scraper: Stories, Comments & Jobs",
+  "description": "Search Hacker News stories, comments, Show HN, Ask HN, jobs and polls via the official Algolia API. Filter by points, comments, author and date; front page; optional nested comment threads. $0.50 per 1,000 items.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": [
+    "NEWS",
+    "DEVELOPER_TOOLS"
+  ],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

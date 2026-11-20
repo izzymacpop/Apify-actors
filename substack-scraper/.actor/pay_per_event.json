@@ -1,0 +1,7 @@
+{
+  "post": {
+    "eventTitle": "Post scraped",
+    "eventDescription": "Charged per Substack post saved.",
+    "eventPriceUsd": 0.002
+  }
+}

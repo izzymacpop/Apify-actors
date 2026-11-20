@@ -1,0 +1,50 @@
+{
+  "title": "Substack Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "publications": {
+      "title": "Newsletters",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Substack newsletter URLs or subdomains, including custom domains (e.g. https://www.lennysnewsletter.com, astralcodexten, https://example.substack.com).",
+      "prefill": [
+        "https://www.lennysnewsletter.com"
+      ]
+    },
+    "searchQueries": {
+      "title": "Search posts by keyword",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Find posts across all of Substack matching these keywords."
+    },
+    "maxPostsPerSource": {
+      "title": "Max posts per newsletter / query",
+      "type": "integer",
+      "minimum": 1,
+      "default": 50,
+      "description": "Max posts per newsletter / query.",
+      "editor": "number"
+    },
+    "publishedAfter": {
+      "title": "Only posts published after",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Only posts published after."
+    },
+    "includeContent": {
+      "title": "Include full post content",
+      "type": "boolean",
+      "default": true,
+      "description": "Adds the post body as text and HTML (paid posts include the free preview only).",
+      "editor": "checkbox"
+    },
+    "freeOnly": {
+      "title": "Free posts only",
+      "type": "boolean",
+      "default": false,
+      "description": "Free posts only.",
+      "editor": "checkbox"
+    }
+  }
+}

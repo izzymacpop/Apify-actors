@@ -1,0 +1,7 @@
+{
+  "item": {
+    "eventTitle": "Feed item",
+    "eventDescription": "Charged per feed item saved.",
+    "eventPriceUsd": 0.0005
+  }
+}

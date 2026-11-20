@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "google-news-scraper",
+  "title": "Google News Scraper (Real Article URLs)",
+  "description": "Scrape Google News by keyword or topic across 13 editions with time filters, and get each article's real publisher URL (decoded from news.google.com links). Title, source, date, optional description and image. $2 per 1,000 articles.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": [
+    "NEWS",
+    "MARKETING"
+  ],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Google Play Reviews Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "apps": {
+      "title": "Apps",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Google Play URLs (https://play.google.com/store/apps/details?id=com.spotify.music) or package IDs (com.spotify.music).",
+      "prefill": [
+        "https://play.google.com/store/apps/details?id=com.spotify.music"
+      ]
+    },
+    "maxReviewsPerApp": {
+      "title": "Max reviews per app",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1000,
+      "description": "Max reviews per app.",
+      "editor": "number"
+    },
+    "sortBy": {
+      "title": "Sort",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "newest",
+        "most_relevant"
+      ],
+      "enumTitles": [
+        "Newest",
+        "Most relevant"
+      ],
+      "default": "newest",
+      "description": "Sort."
+    },
+    "language": {
+      "title": "Language",
+      "type": "string",
+      "default": "en",
+      "description": "Review language code, e.g. en, es, de.",
+      "editor": "textfield"
+    },
+    "country": {
+      "title": "Country",
+      "type": "string",
+      "default": "us",
+      "description": "Two-letter country code, e.g. us, gb.",
+      "editor": "textfield"
+    },
+    "ratings": {
+      "title": "Only these star ratings",
+      "type": "array",
+      "editor": "stringList",
+      "description": "e.g. 1, 2. Empty = all."
+    },
+    "newerThan": {
+      "title": "Only reviews newer than",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Stop when reviews get older than this date (works with 'Newest' sort)."
+    },
+    "includeAppDetails": {
+      "title": "Add app details to each review",
+      "type": "boolean",
+      "default": true,
+      "description": "Add app details to each review.",
+      "editor": "checkbox"
+    }
+  },
+  "required": [
+    "apps"
+  ]
+}

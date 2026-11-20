@@ -1,0 +1,12 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Results",
+      "transformation": {},
+      "display": {
+        "component": "table"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "RSS Feed Reader input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": {
+      "title": "Feeds or websites",
+      "type": "array",
+      "editor": "stringList",
+      "description": "RSS/Atom feed URLs, or plain website URLs: feeds are discovered automatically from the page.",
+      "prefill": [
+        "https://www.bbc.co.uk/news",
+        "https://hnrss.org/frontpage"
+      ]
+    },
+    "maxItemsPerFeed": {
+      "title": "Max items per feed",
+      "type": "integer",
+      "minimum": 1,
+      "default": 100,
+      "description": "Max items per feed.",
+      "editor": "number"
+    },
+    "publishedAfter": {
+      "title": "Only items published after",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Only items published after."
+    },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep items whose title or summary contains any of these."
+    },
+    "includeContent": {
+      "title": "Include full content",
+      "type": "boolean",
+      "default": true,
+      "description": "Include full content.",
+      "editor": "checkbox"
+    },
+    "discoverAllFeeds": {
+      "title": "Use every feed found on a website",
+      "type": "boolean",
+      "default": false,
+      "description": "If off, only the first feed found on each website is used.",
+      "editor": "checkbox"
+    }
+  },
+  "required": [
+    "urls"
+  ]
+}

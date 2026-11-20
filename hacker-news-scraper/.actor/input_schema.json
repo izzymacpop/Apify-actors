@@ -1,0 +1,106 @@
+{
+  "title": "Hacker News Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchQueries": {
+      "title": "Search",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keywords to search stories or comments for. Leave empty with 'Front page' on for today's front page.",
+      "prefill": [
+        "Claude"
+      ]
+    },
+    "contentType": {
+      "title": "Content type",
+      "type": "string",
+      "editor": "select",
+      "default": "story",
+      "enum": [
+        "story",
+        "comment",
+        "show_hn",
+        "ask_hn",
+        "job",
+        "poll"
+      ],
+      "enumTitles": [
+        "Stories",
+        "Comments",
+        "Show HN",
+        "Ask HN",
+        "Jobs",
+        "Polls"
+      ],
+      "description": "Content type."
+    },
+    "sortBy": {
+      "title": "Sort",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "relevance",
+        "date"
+      ],
+      "default": "date",
+      "description": "Sort."
+    },
+    "frontPage": {
+      "title": "Include current front page",
+      "type": "boolean",
+      "default": false,
+      "description": "Include current front page.",
+      "editor": "checkbox"
+    },
+    "authors": {
+      "title": "Only by these users",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Only by these users."
+    },
+    "minPoints": {
+      "title": "Minimum points",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Minimum points.",
+      "editor": "number"
+    },
+    "minComments": {
+      "title": "Minimum comments",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Minimum comments.",
+      "editor": "number"
+    },
+    "createdAfter": {
+      "title": "Created after",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Created after."
+    },
+    "createdBefore": {
+      "title": "Created before",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Created before."
+    },
+    "includeComments": {
+      "title": "Include comment threads for stories",
+      "type": "boolean",
+      "default": false,
+      "description": "Adds each story's full comment tree (nested) to the story row.",
+      "editor": "checkbox"
+    },
+    "maxItems": {
+      "title": "Max items per query",
+      "type": "integer",
+      "minimum": 1,
+      "default": 200,
+      "description": "Max items per query.",
+      "editor": "number"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "actorSpecification": 1,
+  "name": "website-contact-extractor",
+  "title": "Website Contact & Social Links Extractor",
+  "description": "Extract emails, phone numbers and social profiles (Facebook, Instagram, LinkedIn, X, TikTok, YouTube, Pinterest, Threads, Bluesky, WhatsApp) from any list of websites. Scans contact/about/team pages, decodes obfuscated emails. $3 per 1,000 websites.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": [
+    "LEAD_GENERATION"
+  ],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "job": {
+    "eventTitle": "Job scraped",
+    "eventDescription": "Charged for each job listing saved to the dataset.",
+    "eventPriceUsd": 0.0015
+  }
+}

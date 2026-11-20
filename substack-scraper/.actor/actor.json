@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "substack-scraper",
+  "title": "Substack Scraper: Posts, Likes & Full Text",
+  "description": "Scrape Substack newsletters (incl. custom domains) or search all of Substack: titles, dates, authors, likes, comments, restacks, word count, paid/free and full text. Works with Substack's new 2026 archive API. $2 per 1,000 posts.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": [
+    "NEWS",
+    "SOCIAL_MEDIA"
+  ],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

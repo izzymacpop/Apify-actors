@@ -1,0 +1,45 @@
+{
+  "title": "Sitemap URL Extractor input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": {
+      "title": "Websites or sitemaps",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Website URLs (sitemaps are found via robots.txt and common paths) or direct sitemap URLs (.xml, .xml.gz, .txt).",
+      "prefill": [
+        "https://www.bbc.co.uk"
+      ]
+    },
+    "includePatterns": {
+      "title": "Include URLs matching",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep only URLs containing any of these text fragments or regular expressions (e.g. /blog/, /products/)."
+    },
+    "excludePatterns": {
+      "title": "Exclude URLs matching",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Exclude URLs matching."
+    },
+    "modifiedAfter": {
+      "title": "Only URLs modified after",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Uses each URL's <lastmod> where the site provides it."
+    },
+    "maxUrlsPerSite": {
+      "title": "Max URLs per site",
+      "type": "integer",
+      "minimum": 1,
+      "default": 10000,
+      "description": "Max URLs per site.",
+      "editor": "number"
+    }
+  },
+  "required": [
+    "urls"
+  ]
+}

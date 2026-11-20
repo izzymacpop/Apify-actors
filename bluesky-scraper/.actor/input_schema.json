@@ -1,0 +1,84 @@
+{
+  "title": "Bluesky Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchPosts": {
+      "title": "Search posts",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keywords or hashtags to search Bluesky posts for. Supports Bluesky search syntax (from:handle, #tag, \"exact phrase\", lang:en).",
+      "prefill": [
+        "#history"
+      ]
+    },
+    "sort": {
+      "title": "Search sort",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "latest",
+        "top"
+      ],
+      "default": "latest",
+      "description": "Search sort."
+    },
+    "since": {
+      "title": "Posts since (date)",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Posts since (date)."
+    },
+    "until": {
+      "title": "Posts until (date)",
+      "type": "string",
+      "editor": "datepicker",
+      "description": "Posts until (date)."
+    },
+    "language": {
+      "title": "Language",
+      "type": "string",
+      "description": "Two-letter language code filter for search, e.g. en.",
+      "editor": "textfield"
+    },
+    "profiles": {
+      "title": "Profiles",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Bluesky handles (bsky.app), DIDs or profile URLs (https://bsky.app/profile/bsky.app)."
+    },
+    "profileData": {
+      "title": "For each profile, get",
+      "type": "array",
+      "editor": "select",
+      "items": {
+        "type": "string",
+        "enum": [
+          "details",
+          "posts",
+          "followers",
+          "following"
+        ]
+      },
+      "default": [
+        "details",
+        "posts"
+      ],
+      "description": "What to collect for each profile."
+    },
+    "searchUsers": {
+      "title": "Search users",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Find accounts by name or bio keywords."
+    },
+    "maxItems": {
+      "title": "Max items per search / profile list",
+      "type": "integer",
+      "minimum": 1,
+      "default": 200,
+      "description": "Max items per search / profile list.",
+      "editor": "number"
+    }
+  }
+}

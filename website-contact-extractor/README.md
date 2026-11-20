@@ -1,0 +1,34 @@
+# Website Contact & Social Links Extractor
+
+Give it a list of websites and get back **emails, phone numbers and social media profiles** for each one: Facebook, Instagram, LinkedIn, X/Twitter, TikTok, YouTube, Pinterest, Threads, Bluesky and WhatsApp. One clean row per website, ready for your CRM.
+
+## How it works
+For each site it reads the homepage and the pages most likely to hold contact details (Contact, About, Team, Impressum/Legal, Privacy), up to your page limit. It decodes obfuscated emails (`name [at] domain [dot] com`, Cloudflare-protected emails) and validates phone numbers with Google's libphonenumber.
+
+## Output example
+```json
+{
+  "website": "https://example.co.uk",
+  "domain": "example.co.uk",
+  "companyName": "Example Ltd",
+  "emails": ["hello@example.co.uk", "support@example.co.uk"],
+  "phones": ["+44 20 7946 0000"],
+  "facebook": ["https://www.facebook.com/example"],
+  "instagram": ["https://www.instagram.com/example"],
+  "linkedin": ["https://www.linkedin.com/company/example"],
+  "twitter": ["https://x.com/example"],
+  "tiktok": [], "youtube": [], "pinterest": [], "threads": [], "bluesky": [], "whatsapp": [],
+  "pagesScanned": ["https://example.co.uk/", "https://example.co.uk/contact"]
+}
+```
+
+## Use cases
+- Enrich lead lists from Google Maps, directories or Companies House with emails and socials
+- Build outreach lists for agencies, B2B sales and recruiters
+- Check competitors' social presence
+
+## Pricing
+**$3 per 1,000 websites**, charged only for websites where at least one contact was found.
+
+## Responsible use
+Only publicly displayed contact details are collected. Follow GDPR/PECR and anti-spam laws when contacting people.

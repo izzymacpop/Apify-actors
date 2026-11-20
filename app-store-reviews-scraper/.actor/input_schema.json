@@ -1,0 +1,69 @@
+{
+  "title": "App Store Reviews Scraper input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "apps": {
+      "title": "Apps",
+      "type": "array",
+      "editor": "stringList",
+      "description": "App Store URLs (https://apps.apple.com/gb/app/spotify/id324684580), numeric app IDs (324684580), or app names to search for (e.g. 'Monzo').",
+      "prefill": [
+        "https://apps.apple.com/gb/app/spotify-music-and-podcasts/id324684580"
+      ]
+    },
+    "countries": {
+      "title": "Countries",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Two-letter App Store country codes. Reviews are per country, so add several to get more (e.g. us, gb, ca, au, ie).",
+      "prefill": [
+        "gb",
+        "us"
+      ],
+      "default": [
+        "us"
+      ]
+    },
+    "maxReviewsPerCountry": {
+      "title": "Max reviews per app per country",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 500,
+      "default": 500,
+      "description": "Apple's public feed exposes up to the 500 most recent reviews per country.",
+      "editor": "number"
+    },
+    "sortBy": {
+      "title": "Sort",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "mostrecent",
+        "mosthelpful"
+      ],
+      "enumTitles": [
+        "Most recent",
+        "Most helpful"
+      ],
+      "default": "mostrecent",
+      "description": "Sort."
+    },
+    "ratings": {
+      "title": "Only these star ratings",
+      "type": "array",
+      "editor": "stringList",
+      "description": "e.g. 1, 2 to collect only negative reviews. Empty = all."
+    },
+    "includeAppDetails": {
+      "title": "Add app details to each review",
+      "type": "boolean",
+      "default": true,
+      "description": "App name, developer, average rating, rating count, price and genre.",
+      "editor": "checkbox"
+    }
+  },
+  "required": [
+    "apps"
+  ]
+}

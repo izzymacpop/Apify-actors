@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "ats-jobs-scraper",
+  "title": "ATS Jobs Scraper: Greenhouse, Lever, Ashby & more",
+  "description": "Scrape all open jobs from Greenhouse, Lever, Ashby, SmartRecruiters, Recruitee and Workable careers pages via their official public feeds. One unified schema, filters for keywords, location, remote and date. Fast, cheap, no proxies.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": [
+    "JOBS",
+    "LEAD_GENERATION"
+  ],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

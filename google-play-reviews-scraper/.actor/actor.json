@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "google-play-reviews-scraper",
+  "title": "Google Play Reviews Scraper",
+  "description": "Scrape Google Play Store reviews for any Android app: rating, text, thumbs-up, version, date and developer reply. Sort, filter by stars or date, choose language and country. $0.25 per 1,000 reviews.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": [
+    "MARKETING",
+    "DEVELOPER_TOOLS"
+  ],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}
