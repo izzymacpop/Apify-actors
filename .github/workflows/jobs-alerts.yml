@@ -1,0 +1,31 @@
+name: Remote jobs alerts
+on:
+  schedule:
+    - cron: "7 * * * *"   # every hour
+  workflow_dispatch:
+concurrency: jobs-alerts
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install httpx
+      - uses: actions/cache/restore@v4
+        with:
+          path: bots/jobs_alerts/state
+          key: jobs-seen-${{ github.run_id }}
+          restore-keys: jobs-seen-
+      - run: python bots/jobs_alerts/bot.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          PAID_CHAT_ID: ${{ vars.PAID_CHAT_ID }}
+          FREE_CHAT_ID: ${{ vars.FREE_CHAT_ID }}
+          PREMIUM_LINK: ${{ vars.PREMIUM_LINK }}
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: bots/jobs_alerts/state
+          key: jobs-seen-${{ github.run_id }}

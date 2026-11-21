@@ -1,0 +1,19 @@
+name: UK Side Hustle Weekly newsletter
+on:
+  schedule:
+    - cron: "13 8 * * 0"   # Sundays ~08:13 UK time (winter)
+  workflow_dispatch:
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install httpx
+      - run: python bots/newsletter/newsletter.py
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          SPONSOR_MD: ${{ vars.SPONSOR_MD }}
+          NEWSLETTER_STATUS: ${{ vars.NEWSLETTER_STATUS }}
