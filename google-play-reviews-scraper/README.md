@@ -26,3 +26,35 @@ Get **Google Play Store reviews** for any Android app: rating, text, thumbs-up c
 
 ## Pricing
 **$0.25 per 1,000 reviews.** Pay only for what you get.
+
+## Input example
+```json
+{
+  "apps": [
+    "https://play.google.com/store/apps/details?id=com.spotify.music"
+  ],
+  "maxReviewsPerApp": 1000,
+  "sortBy": "newest",
+  "language": "en",
+  "country": "us",
+  "includeAppDetails": true
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~google-play-reviews-scraper/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/google-play-reviews-scraper`.
+
+## FAQ
+**Do I need an API key?**
+No login or key needed.
+
+**Can I get developer replies?**
+Yes, each review includes the developer's reply and reply date where there is one.
+
+**Can I choose the language?**
+Yes, set the language and country to get reviews from that market.
+
+## Also known as
+Google Play Store review scraper, Android app reviews export, Play Store ratings to CSV/JSON, developer replies, app review analysis.

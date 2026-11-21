@@ -32,3 +32,32 @@ Scrape **Substack newsletters**: every post's title, subtitle, date, author, lik
 
 ## Pricing
 **$2 per 1,000 posts.**
+
+## Input example
+```json
+{
+  "publications": [
+    "https://www.lennysnewsletter.com"
+  ],
+  "maxPostsPerSource": 50,
+  "includeContent": true
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~substack-scraper/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/substack-scraper`.
+
+## FAQ
+**Does it work with custom domains?**
+Yes, e.g. lennysnewsletter.com works as well as name.substack.com.
+
+**Can I get paid posts?**
+You get metadata for paid posts (title, date, likes). Full text is only available for free posts.
+
+**Can I search all of Substack?**
+Yes, add search terms to find posts and publications across Substack.
+
+## Also known as
+Substack API scraper, Substack newsletter export, Substack posts to JSON/CSV, Substack search, newsletter research and creator analysis.

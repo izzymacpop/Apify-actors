@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "website-contact-extractor",
-  "title": "Website Contact & Social Links Extractor",
+  "title": "Email & Contact Scraper: Emails, Phones & Socials",
   "description": "Extract emails, phone numbers and social profiles (Facebook, Instagram, LinkedIn, X, TikTok, YouTube, Pinterest, Threads, Bluesky, WhatsApp) from any list of websites. Scans contact/about/team pages, decodes obfuscated emails. $3 per 1,000 websites.",
   "version": "1.0",
   "buildTag": "latest",

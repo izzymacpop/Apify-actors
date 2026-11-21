@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "app-store-reviews-scraper",
-  "title": "App Store Reviews Scraper",
+  "title": "App Store Reviews Scraper: iOS App Reviews & Ratings",
   "description": "Scrape iOS App Store reviews by app URL, ID or name across multiple countries: rating, title, text, author, version, date and votes. Filter by stars. Fast, official public feed, no proxies. $0.25 per 1,000 reviews.",
   "version": "1.0",
   "buildTag": "latest",

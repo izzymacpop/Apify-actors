@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "sitemap-url-extractor",
-  "title": "Sitemap URL Extractor",
+  "title": "Sitemap Scraper: Extract All URLs from a Website",
   "description": "Extract every page URL from a website's XML sitemaps: auto-discovers via robots.txt, follows indexes and .gz files. Lastmod, changefreq, priority, images, news tags. Include/exclude and date filters. $0.20 per 1,000 URLs.",
   "version": "1.0",
   "buildTag": "latest",

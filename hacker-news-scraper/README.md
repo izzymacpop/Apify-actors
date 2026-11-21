@@ -22,3 +22,33 @@ Search and export **Hacker News** (news.ycombinator.com) via the official Algoli
 
 ## Pricing
 **$0.50 per 1,000 items.**
+
+## Input example
+```json
+{
+  "searchQueries": [
+    "Claude"
+  ],
+  "contentType": "story",
+  "sortBy": "date",
+  "maxItems": 200
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~hacker-news-scraper/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/hacker-news-scraper`.
+
+## FAQ
+**Is this the official API?**
+It uses HN's official Algolia search API, so it is fast and stable.
+
+**Can I get comment threads?**
+Yes, turn on nested comments to save the full thread for each story.
+
+**Can I monitor a keyword?**
+Yes, search by keyword sorted by date and schedule the tool to run daily.
+
+## Also known as
+Hacker News API scraper, HN search, Show HN and Ask HN export, Hacker News comments to JSON/CSV, tech trend monitoring.

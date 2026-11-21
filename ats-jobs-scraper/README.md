@@ -49,3 +49,33 @@ Pay only for results: **$1.50 per 1,000 jobs**. No subscription, no proxies need
 ## Tips
 - Find a company's slug in its careers URL (the part after the platform domain).
 - Schedule a daily run with `postedWithinDays: 1` for fresh-jobs alerts.
+
+## Input example
+```json
+{
+  "companies": [
+    "https://boards.greenhouse.io/airbnb",
+    "https://jobs.lever.co/palantir",
+    "https://jobs.ashbyhq.com/openai"
+  ],
+  "includeDescription": true
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~ats-jobs-scraper/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/ats-jobs-scraper`.
+
+## FAQ
+**Which companies can I scrape?**
+Any company whose careers page runs on Greenhouse, Lever, Ashby, SmartRecruiters, Recruitee or Workable. Paste the careers page URL or the company's board name.
+
+**Do I need proxies?**
+No. It reads the platforms' official public job feeds, so runs are fast and reliable.
+
+**Can I get only remote jobs?**
+Yes, use the remote, location, keyword and date filters.
+
+## Also known as
+Greenhouse jobs scraper, Lever jobs API, Ashby job board scraper, Workable, SmartRecruiters and Recruitee jobs to JSON/CSV, job board aggregator data.

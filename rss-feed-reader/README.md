@@ -25,3 +25,33 @@ Turn any **RSS or Atom feed, or just a website URL**, into clean, structured JSO
 
 ## Pricing
 **$0.50 per 1,000 items.**
+
+## Input example
+```json
+{
+  "urls": [
+    "https://www.bbc.co.uk/news",
+    "https://hnrss.org/frontpage"
+  ],
+  "maxItemsPerFeed": 100,
+  "includeContent": true
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~rss-feed-reader/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/rss-feed-reader`.
+
+## FAQ
+**I don't know the feed URL. Can I paste a website?**
+Yes. Paste the site URL and the tool finds its feeds automatically.
+
+**Can I get the full article text?**
+Yes, where the feed includes full content.
+
+**Can I monitor feeds?**
+Yes, schedule it and use the date filter to only get new items.
+
+## Also known as
+RSS feed reader API, RSS to JSON, Atom feed parser, automatic feed finder from website URL, news and blog monitoring.

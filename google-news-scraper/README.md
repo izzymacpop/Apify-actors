@@ -33,3 +33,34 @@ Collect **Google News articles** for any keyword or topic, with each article's *
 
 ## Notes
 Google News returns up to about 100 results per query. Use several narrower queries or time filters to collect more.
+
+## Input example
+```json
+{
+  "queries": [
+    "artificial intelligence"
+  ],
+  "edition": "en-GB:GB",
+  "timeframe": "any",
+  "maxArticlesPerQuery": 100,
+  "decodeUrls": true
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~google-news-scraper/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/google-news-scraper`.
+
+## FAQ
+**Why are the URLs different from Google News links?**
+Google News wraps every article in a news.google.com redirect. This tool decodes it to the real publisher URL, so you can open or scrape the article directly.
+
+**Which countries are supported?**
+13 editions including UK, US, Canada, Australia, India, Ireland, Germany, France and Spain.
+
+**Can I get only today's news?**
+Yes, set the time filter to the past hour, day or week.
+
+## Also known as
+Google News API alternative, Google News RSS scraper, news monitoring, media monitoring, decode news.google.com links to publisher URLs.

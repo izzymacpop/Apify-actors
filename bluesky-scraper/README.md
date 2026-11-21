@@ -27,3 +27,36 @@ Scrape **Bluesky** (bsky.app) with no login: search posts by keyword or hashtag,
 
 ## Pricing
 **$0.50 per 1,000 items** (posts, profiles or followers).
+
+## Input example
+```json
+{
+  "searchPosts": [
+    "#history"
+  ],
+  "sort": "latest",
+  "profileData": [
+    "details",
+    "posts"
+  ],
+  "maxItems": 200
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~bluesky-scraper/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/bluesky-scraper`.
+
+## FAQ
+**Do I need a Bluesky account?**
+No. It uses Bluesky's public AppView API.
+
+**Can I search hashtags?**
+Yes, add terms like #history to the search box, with optional date and language filters.
+
+**Can I export followers?**
+Yes, choose followers or following in the profile options.
+
+## Also known as
+Bluesky post scraper, Bluesky search API, bsky.app profile and follower export, Bluesky hashtag monitoring, social listening data.

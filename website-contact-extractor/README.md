@@ -32,3 +32,32 @@ For each site it reads the homepage and the pages most likely to hold contact de
 
 ## Responsible use
 Only publicly displayed contact details are collected. Follow GDPR/PECR and anti-spam laws when contacting people.
+
+## Input example
+```json
+{
+  "websites": [
+    "https://monzo.com"
+  ],
+  "maxPagesPerSite": 8,
+  "phoneRegion": "GB"
+}
+```
+
+## Run it via API, schedules or AI agents
+- **API:** `POST https://api.apify.com/v2/acts/jbyzl~website-contact-extractor/run-sync-get-dataset-items?token=YOUR_TOKEN` with the input above as the JSON body. Results come back as JSON; CSV, Excel and XML exports are available from the dataset.
+- **Schedules & integrations:** run it daily or hourly with Apify Schedules and send results to Google Sheets, Slack, Zapier, Make or n8n.
+- **AI agents (MCP):** available through the Apify MCP server (`mcp.apify.com`), so Claude, ChatGPT, Cursor and other agents can call it as a tool: ask your agent to use `jbyzl/website-contact-extractor`.
+
+## FAQ
+**Which pages does it check?**
+The homepage plus likely contact, about and team pages, up to your page limit.
+
+**Am I charged for sites with no contacts?**
+No. You're only charged for websites where at least one email, phone or social link was found.
+
+**Does it find hidden emails?**
+It decodes common obfuscation such as Cloudflare email protection.
+
+## Also known as
+website email scraper, contact details extractor, phone number scraper, social media links finder, lead generation from a list of websites, alternative to Hunter-style domain search.

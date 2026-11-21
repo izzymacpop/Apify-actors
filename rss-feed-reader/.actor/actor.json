@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "rss-feed-reader",
-  "title": "RSS Feed Reader & Feed Finder",
+  "title": "RSS Feed Scraper: Any RSS/Atom Feed to JSON",
   "description": "Read any RSS/Atom feed, or just a website URL (feeds auto-discovered), into clean JSON: title, link, ISO date, author, summary, full content, categories, image. Date and keyword filters for monitoring. $0.50 per 1,000 items.",
   "version": "1.0",
   "buildTag": "latest",
