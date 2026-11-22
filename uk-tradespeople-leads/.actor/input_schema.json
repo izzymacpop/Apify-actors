@@ -1,0 +1,14 @@
+{
+  "title": "UK Tradespeople Leads input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "trades": {"title": "Trades", "type": "array", "editor": "stringList", "description": "Trades to search, e.g. plumber, electrician, builder, roofer, locksmith, gardener, painter, carpenter, plasterer, gas engineer.", "prefill": ["plumber", "electrician"]},
+    "locations": {"title": "Towns, cities or postcodes", "type": "array", "editor": "stringList", "description": "UK towns, cities or postcodes. Bark only has pages for larger towns and cities.", "prefill": ["Manchester"]},
+    "maxResultsPerSearch": {"title": "Max leads per trade, location and source", "type": "integer", "minimum": 1, "default": 100, "editor": "number", "description": "Cap for each trade + location + source."},
+    "sources": {"title": "Sources", "type": "array", "editor": "select", "items": {"type": "string", "enum": ["trustatrader", "bark"], "enumTitles": ["TrustATrader (with phone numbers)", "Bark"]}, "default": ["trustatrader", "bark"], "description": "Which directories to search."},
+    "onlyWithPhone": {"title": "Only leads with a phone number", "type": "boolean", "default": false, "description": "Skip results that have no phone number."},
+    "minRating": {"title": "Minimum rating", "type": "string", "editor": "textfield", "description": "Optional, e.g. 4.5. Leave empty for all."}
+  },
+  "required": ["trades", "locations"]
+}

@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "uk-events-finder",
+  "title": "UK Events Finder: Skiddle + Eventbrite + DICE (What's On API)",
+  "description": "What's on in any UK city from Skiddle, Eventbrite and DICE in one de-duplicated list: gigs, club nights, comedy, theatre, food, family and business events. Date, venue, postcode, GPS, price, line-up, ticket link. $1 per 1,000 events.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["TRAVEL", "NEWS"],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {"dataset": "./dataset_schema.json"},
+  "output": "./output_schema.json"
+}

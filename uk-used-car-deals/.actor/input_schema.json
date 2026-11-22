@@ -1,0 +1,19 @@
+{
+  "title": "UK Used Car Deals input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "locations": {"title": "Towns, cities or postcodes", "type": "array", "editor": "stringList", "description": "Where to search, e.g. Leeds, Birmingham, M1 1AA. Use 'uk' for the whole country.", "prefill": ["Manchester"]},
+    "searchTerms": {"title": "Make / model / keywords", "type": "array", "editor": "stringList", "description": "One search per line, e.g. 'ford fiesta', 'bmw 3 series', 'transit'. Leave empty for everything.", "prefill": ["ford fiesta"]},
+    "vehicleType": {"title": "Vehicle type", "type": "string", "editor": "select", "enum": ["cars", "vans", "motorbikes", "campervans"], "enumTitles": ["Cars", "Vans", "Motorbikes", "Campervans & motorhomes"], "default": "cars", "description": "What to search for."},
+    "minPrice": {"title": "Min price (£)", "type": "integer", "minimum": 0, "editor": "number", "description": "Optional."},
+    "maxPrice": {"title": "Max price (£)", "type": "integer", "minimum": 0, "editor": "number", "description": "Optional."},
+    "distanceMiles": {"title": "Distance (miles)", "type": "integer", "minimum": 0, "editor": "number", "description": "Optional search radius around each location."},
+    "privateSellersOnly": {"title": "Private sellers only", "type": "boolean", "default": false, "description": "Skip dealers and trade sellers."},
+    "maxMileage": {"title": "Max mileage", "type": "integer", "minimum": 0, "editor": "number", "description": "Optional."},
+    "minYear": {"title": "Min year", "type": "integer", "minimum": 1950, "editor": "number", "description": "Optional, e.g. 2015."},
+    "onlyDealsBelowMedianPercent": {"title": "Only deals at least X% below similar listings", "type": "integer", "minimum": 0, "maximum": 95, "editor": "number", "description": "Optional, e.g. 15 keeps listings priced 15%+ under the median of similar cars (same make, model, year +-1) found in this run."},
+    "maxResultsPerSearch": {"title": "Max listings per location and search", "type": "integer", "minimum": 1, "default": 200, "editor": "number", "description": "Cap for each location + search term."}
+  },
+  "required": ["locations"]
+}

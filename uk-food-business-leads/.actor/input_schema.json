@@ -1,0 +1,15 @@
+{
+  "title": "UK Food Business Leads input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "locations": {"title": "Towns, cities or postcodes", "type": "array", "editor": "stringList", "description": "UK towns, cities, postcodes or postcode districts (e.g. Leeds, SW1, RM10 7UB).", "prefill": ["Manchester"]},
+    "businessTypes": {"title": "Business types", "type": "array", "editor": "select", "items": {"type": "string", "enum": ["takeaway", "restaurant", "pub", "hotel", "mobile", "otherCatering", "retailer", "supermarket", "manufacturer", "distributor", "importer", "caring", "school", "farm"], "enumTitles": ["Takeaway / sandwich shop", "Restaurant / cafe / canteen", "Pub / bar / nightclub", "Hotel / B&B / guest house", "Mobile caterer / food truck", "Other catering", "Food retailer (shops)", "Supermarket", "Manufacturer / packer", "Distributor / transporter", "Importer / exporter", "Hospital / childcare / care home", "School / college", "Farm / grower"]}, "default": ["takeaway"], "description": "Which kinds of food business to include."},
+    "onlyNewBusinesses": {"title": "Only NEW businesses (awaiting first inspection)", "type": "boolean", "default": false, "description": "Newly registered food businesses that haven't had their first inspection yet. Great for reaching new openings first."},
+    "maxHygieneRating": {"title": "Max hygiene rating", "type": "integer", "minimum": 0, "maximum": 5, "editor": "number", "description": "Optional. E.g. 2 returns only businesses rated 0, 1 or 2 (food safety consultants, training providers)."},
+    "ratedInLastDays": {"title": "Inspected in the last X days", "type": "integer", "minimum": 0, "editor": "number", "description": "Optional. Only businesses inspected recently."},
+    "nameContains": {"title": "Name contains", "type": "string", "editor": "textfield", "description": "Optional, e.g. pizza, chicken, kebab, cafe."},
+    "maxResultsPerLocation": {"title": "Max results per location and type", "type": "integer", "minimum": 1, "default": 500, "editor": "number", "description": "Cap for each location + business type."}
+  },
+  "required": ["locations"]
+}

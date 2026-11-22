@@ -1,0 +1,14 @@
+{
+  "title": "UK Salon & Beauty Leads input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "locations": {"title": "Cities or 'Area, City'", "type": "array", "editor": "stringList", "description": "UK cities (Leeds, Manchester) or a neighbourhood with its city, e.g. 'Dagenham, London' or 'Didsbury, Manchester'.", "prefill": ["Manchester", "Shoreditch, London"]},
+    "categories": {"title": "Categories", "type": "array", "editor": "select", "items": {"type": "string", "enum": ["hair", "nails", "beauty", "barbers", "spa", "massage", "lashesBrows", "aesthetics"], "enumTitles": ["Hair salons", "Nail salons", "Beauty salons", "Barbers", "Spas", "Massage (Fresha only)", "Lashes & brows (Fresha only)", "Aesthetics clinics (Fresha only)"]}, "default": ["hair"], "description": "Types of business to find."},
+    "sources": {"title": "Sources", "type": "array", "editor": "select", "items": {"type": "string", "enum": ["fresha", "treatwell"], "enumTitles": ["Fresha", "Treatwell"]}, "default": ["fresha", "treatwell"], "description": "Which booking sites to search."},
+    "includeSubAreas": {"title": "Also search every neighbourhood (Fresha)", "type": "boolean", "default": false, "description": "For a whole city, also crawl Fresha's neighbourhood pages to find far more salons. Slower."},
+    "maxResultsPerSearch": {"title": "Max results per category, location and source", "type": "integer", "minimum": 1, "default": 200, "editor": "number", "description": "Cap for each category + location + source."},
+    "onlyWithPhone": {"title": "Only salons with a phone number", "type": "boolean", "default": false, "description": "Skip results without a phone number."}
+  },
+  "required": ["locations"]
+}

@@ -1,6 +1,6 @@
 # Apify Actors
 
-Ten pay-per-result Apify Actors. Each folder is a self-contained Actor (Python, `apify/actor-python:3.13`).
+Pay-per-result Apify Actors. Each folder is a self-contained Actor (Python, `apify/actor-python:3.13`).
 
 | Folder | Store title | Price |
 |---|---|---|
@@ -15,3 +15,8 @@ Ten pay-per-result Apify Actors. Each folder is a self-contained Actor (Python, 
 | sitemap-url-extractor | Sitemap URL Extractor | $0.20 / 1k URLs |
 | website-contact-extractor | Website Contact & Social Links Extractor | $3 / 1k websites |
 | hacker-news-scraper | Hacker News Scraper: Stories, Comments & Jobs | $0.50 / 1k items |
+| uk-tradespeople-leads | UK Tradespeople Leads: TrustATrader + Bark | $2 / 1k leads |
+| uk-food-business-leads | UK Takeaway & Restaurant Leads (FSA) | $1.50 / 1k |
+| uk-salon-beauty-leads | UK Salon & Beauty Leads: Fresha + Treatwell | $2 / 1k |
+| uk-events-finder | UK Events Finder: Skiddle + Eventbrite + DICE | $1 / 1k events |
+| uk-used-car-deals | UK Used Car Deals Finder: Gumtree + Deal Score | $1.50 / 1k listings |

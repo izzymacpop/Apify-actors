@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "uk-used-car-deals",
+  "title": "UK Used Car Deals Finder: Gumtree Cars, Vans & Bikes + Deal Score",
+  "description": "Search Gumtree UK used cars, vans, motorbikes and campervans by town, keyword and price, and get a DEAL SCORE: how far each price is below similar listings. Private or trade seller, year, mileage, fuel, engine, location, link. $1.50 per 1,000.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["ECOMMERCE", "AUTOMATION"],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {"dataset": "./dataset_schema.json"},
+  "output": "./output_schema.json"
+}

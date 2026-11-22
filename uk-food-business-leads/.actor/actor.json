@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "uk-food-business-leads",
+  "title": "UK Takeaway & Restaurant Leads: New Openings + Hygiene Ratings",
+  "description": "Every UK takeaway, restaurant, cafe, pub and food shop by town or postcode, from the official Food Standards Agency register. Find NEW food businesses before they open, or low hygiene ratings. Address, postcode, GPS, rating. $1.50 per 1,000.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["LEAD_GENERATION", "BUSINESS"],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {"dataset": "./dataset_schema.json"},
+  "output": "./output_schema.json"
+}

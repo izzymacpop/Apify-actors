@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "uk-salon-beauty-leads",
+  "title": "UK Salon & Beauty Leads: Fresha + Treatwell (Phones, Websites)",
+  "description": "Hair salons, nail bars, barbers, beauty salons, spas, lash & brow and aesthetics clinics in any UK city or area. Combines Fresha and Treatwell: name, phone, address, postcode, rating, reviews, website, Instagram, GPS. $2 per 1,000.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["LEAD_GENERATION", "BUSINESS"],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {"dataset": "./dataset_schema.json"},
+  "output": "./output_schema.json"
+}

@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "uk-tradespeople-leads",
+  "title": "UK Tradespeople Leads: TrustATrader + Bark (Phones, Ratings)",
+  "description": "Find UK plumbers, electricians, builders, roofers and any trade by town or postcode. Combines TrustATrader and Bark in one run: name, phone numbers, rating, reviews, area covered, profile link. De-duplicated. $2 per 1,000 leads.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["LEAD_GENERATION", "BUSINESS"],
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {"dataset": "./dataset_schema.json"},
+  "output": "./output_schema.json"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "UK Events Finder input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "cities": {"title": "Cities", "type": "array", "editor": "stringList", "description": "UK cities, e.g. London, Manchester, Leeds, Birmingham, Bristol, Glasgow, Edinburgh, Liverpool, Newcastle, Nottingham, Brighton.", "prefill": ["Manchester"]},
+    "categories": {"title": "Categories", "type": "array", "editor": "select", "items": {"type": "string", "enum": ["all", "gigs", "clubs", "comedy", "theatre", "food", "family", "sport", "arts", "business", "thisWeekend"], "enumTitles": ["Everything", "Gigs & live music", "Club nights", "Comedy", "Theatre & performing arts", "Food & drink", "Family", "Sport & fitness", "Arts", "Business & networking", "This weekend"]}, "default": ["all", "gigs", "clubs", "comedy"], "description": "More categories = more events found."},
+    "sources": {"title": "Sources", "type": "array", "editor": "select", "items": {"type": "string", "enum": ["skiddle", "eventbrite", "dice"], "enumTitles": ["Skiddle", "Eventbrite", "DICE"]}, "default": ["skiddle", "eventbrite", "dice"], "description": "Ticket sites to search."},
+    "nextDays": {"title": "Only events in the next X days", "type": "integer", "minimum": 0, "editor": "number", "description": "Optional, e.g. 7 for the coming week."},
+    "keywords": {"title": "Keywords", "type": "array", "editor": "stringList", "description": "Optional. Keep events whose name, line-up, venue or description mention any of these (e.g. techno, quiz, christmas)."},
+    "maxEventsPerCity": {"title": "Max events per city", "type": "integer", "minimum": 1, "default": 500, "editor": "number", "description": "Cap per city."}
+  },
+  "required": ["cities"]
+}
