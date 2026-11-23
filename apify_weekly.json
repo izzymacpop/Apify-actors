@@ -1,0 +1,103 @@
+{
+ "weeks": [
+  {
+   "date": "2026-11-23",
+   "actors": {
+    "google-play-reviews-scraper": {
+     "title": "Google Play Reviews Scraper",
+     "totalUsers": 2,
+     "totalRuns": 3,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "app-store-reviews-scraper": {
+     "title": "App Store Reviews Scraper",
+     "totalUsers": 2,
+     "totalRuns": 3,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "ats-jobs-scraper": {
+     "title": "ATS Jobs Scraper: Greenhouse, Lever, Ashby & more",
+     "totalUsers": 2,
+     "totalRuns": 4,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "substack-scraper": {
+     "title": "Substack Scraper",
+     "totalUsers": 2,
+     "totalRuns": 3,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "uk-used-car-deals": {
+     "title": "UK Used Car Deals: Gumtree Cars, Vans & Bikes + Deal Score",
+     "totalUsers": 2,
+     "totalRuns": 2,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "bluesky-scraper": {
+     "title": "Bluesky Scraper",
+     "totalUsers": 2,
+     "totalRuns": 2,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "website-contact-extractor": {
+     "title": "Website Contact Extractor",
+     "totalUsers": 2,
+     "totalRuns": 2,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "google-news-scraper": {
+     "title": "Google News Scraper",
+     "totalUsers": 2,
+     "totalRuns": 3,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "podcast-scraper": {
+     "title": "Podcast Scraper",
+     "totalUsers": 2,
+     "totalRuns": 3,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    },
+    "sitemap-url-extractor": {
+     "title": "Sitemap URL Extractor",
+     "totalUsers": 2,
+     "totalRuns": 2,
+     "totalUsers30Days": 1,
+     "reviewCount": 0,
+     "rating": 0,
+     "failed30d": 0
+    }
+   },
+   "totals": {
+    "users": 20,
+    "runs": 27
+   }
+  }
+ ]
+}
